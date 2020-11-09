@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react';
-// import queryString from 'query-string';
+import  { useHistory } from 'react-router-dom'
 import io from "socket.io-client";
 
 import InfoBar from '../InfoBar/InfoBar';
@@ -20,10 +20,11 @@ const Chat = ({ location }) => {
     const [messages, setMessages] = useState([]);
     const ENDPOINT = 'http://localhost:5000/';
 
+    let history = useHistory();
+
     const { name, room } = useContext(UserContext);
 
     useEffect(() => {
-        // const { name, room } = queryString.parse(location.search);
 
         socket = io(ENDPOINT);
 
@@ -33,6 +34,7 @@ const Chat = ({ location }) => {
         socket.emit('join', { name, room }, (error) => {
             if(error) {
                 alert(error);
+                history.push("/");
             }
         });
 
@@ -41,7 +43,7 @@ const Chat = ({ location }) => {
 
             socket.off();
         }
-    }, [ENDPOINT, name, room]);
+    }, [ENDPOINT, name, room, history]);
 
     useEffect(() => {
         socket.on('message', (message) => {
