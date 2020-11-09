@@ -11,7 +11,7 @@ const App = () => {
     const [name, setName] = useState('');
     const [room, setRoom] = useState('');
 
-    const themeContext = useMemo(() => {
+    const userDetails = useMemo(() => {
 		return {
 			getDetails: (name,room) => {
 				setName(name);
@@ -24,7 +24,7 @@ const App = () => {
 
     return (
         <Router>
-            <UserContext.Provider value={themeContext}>
+            <UserContext.Provider value={userDetails}>
                 <Route exact path="/" component={Join} />
                 <Route path="/chat" component={Chat} />
             </UserContext.Provider>
