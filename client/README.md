@@ -1,3 +1,8 @@
+# React-Chat-App-Frontend
+
+The live chat server runs on https://peaceful-liskov-49099d.netlify.app/
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
