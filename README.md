@@ -4,10 +4,12 @@ Real-time Chat Application created with React, Express, Node and Socket.IO
 # React-Chat-App-Frontend
 
 The live frontend server runs on https://peaceful-liskov-49099d.netlify.app/
+- Frontend source code - https://github.com/DasithDeelaka/React-Chat-App-Frontend.git
 
 # React-Chat-App-Backend
 
 The live backend server runs on https://chatapp-react-node.herokuapp.com/
+- Backend source code - https://github.com/DasithDeelaka/React-Chat-App-Backend.git
 
 # How to install and run in the local machine
 
